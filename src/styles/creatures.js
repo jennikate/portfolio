@@ -12,7 +12,7 @@ const creatureArray = [
     name: 'tiefling',
     url: 'https://github.com/jennikate/jkw/blob/master/src/styles/images/gnome.png?raw=true',
     menuName: 'portfolio',
-    menuLink: '/portfolio'
+    menuLink: '/projects'
   },
   {
     name: 'elf2',
