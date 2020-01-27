@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { loadCSS } from 'fg-loadcss'
+//my styles
+import './styles/main.scss'
+//my pages
+import Home from './components/pages/Home'
+import Examples from './components/pages/Examples'
+import About from './components/pages/About'
+import Menu from './components/pages/Menu'
+import Contact from './components/pages/Contact'
 
-function App() {
+const App = () => {
+
+  useEffect(() => {
+    loadCSS('https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css')
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    <BrowserRouter>
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route exact path='/menu' component={Menu} />
+        <Route exact path='/portfolio' component={Examples} />
+        <Route exact path='/about' component={About} />
+        <Route exact path='/contact' component={Contact} />
+      </Switch>
+    </BrowserRouter>
+
+  )
 }
 
 export default App;

@@ -1,0 +1,363 @@
+//look into how to do file imports so bundle connects them properly
+//until then, all is in this file
+
+
+//===== RESET
+@import '~@csstools/normalize.css';
+
+//===== VARIABLES
+
+//----- Fonts
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Roboto|Rock+Salt|Material+Icons&display=swap');
+$font-name: 'Dancing Script', cursive;
+$font-logo: 'Rock Salt', cursive;
+$font-main: 'Roboto', sans-serif;
+
+//----- Colors
+
+$brand-white: #EFF4F5; //used as background to counter pure white
+$pure-white: #FFFFFF;
+$brand-black: #000000;
+$brand-primary: #00635D;
+$brand-secondary: #D62246;
+$shadow: 5px 5px 8px -10px rgba(0,0,0,0.75);
+
+//----- Break point(s) -- currently only utilisng one
+$width: 700px;
+
+
+//===== CSS
+
+
+//===================================
+// BASE
+//===================================
+html, body {
+  font-family: $font-main;
+  height: 100%;
+  margin: 0;
+  background-color: $brand-white;
+}
+
+//===================================
+// LAYOUT :: MOBILE FIRST
+//===================================
+* {
+  box-sizing: border-box; 
+}
+
+//--- component wrapper
+.container {
+  min-height: 100vh;
+  position: relative;
+  margin-top: 3rem; //allow for sticky nav
+}
+
+//--- flex containers
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+}
+.flex-standard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flex-horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid $brand-primary;
+  box-shadow: $shadow;
+  padding: 0.25rem 1rem 0 0.5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $brand-white;
+  z-index: 1; //always on top
+}
+//--- related content wrapper
+.content {
+  margin: 0.5rem 1rem;
+  padding: 1rem;
+}
+.content-block {
+  background-color: $pure-white;
+  box-shadow: $shadow;
+}
+
+//===================================
+// CARDS
+//===================================
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: $pure-white;
+  margin: 0.1rem;
+  box-shadow: $shadow;
+}
+
+//===================================
+// TEXT
+//===================================
+.signature {
+  font-family: $font-name;
+  font-size: 1.5rem;
+  text-align: right;
+  margin: -1rem 2rem 0 0;
+  color: $brand-secondary;
+}
+a {
+  color: $brand-primary;
+  text-decoration: none;
+}
+a:hover {
+  color: $brand-secondary;
+  text-decoration: underline;
+}
+h1 {
+  margin-block-start: 0.5rem;
+  font-size: 1.5em;
+}
+h2 {
+  margin-block-end: 0.5rem; //reduce the bottom margin that is specified in normalize.css
+  text-transform: uppercase;
+}
+ul, p {
+  margin-block-start: 0;
+  padding-inline-start: 0;
+}
+.inline-list li {
+  margin: 0 0.5rem;
+  text-transform: uppercase;
+  list-style-type: none;
+}
+.app-info {
+  font-style: italic;
+}
+.logo p {
+  margin: 0;
+  padding: 0;
+  font-family: $font-logo;
+  color: $brand-secondary;
+  font-weight: bold;
+}
+.logo:hover {
+  text-decoration: none;
+} 
+//===================================
+// IMAGERY
+//===================================
+
+.icons {
+  width: 100%;
+  text-align: center;
+}
+// default svg sizing for use inline
+svg {
+  width: 2rem;
+}
+// // adjusted sizing for card display
+// .card svg {
+//   width: 3rem;
+// }
+.icon-link path {
+  fill: $brand-secondary;
+}
+.devicon path {
+  fill: $brand-primary;
+}
+.project-example {
+  max-width: 100%;
+  box-shadow: 10px 10px 24px -16px rgba(0,0,0,0.75);
+}
+.creature img {
+  width: 64px;
+}
+//arrow inspiration from https://codepen.io/JoshMac/pen/MaYEmJ, with small adjustments
+//px coded to ensure it keeps the same shape and position regardless of device
+.arrow {
+  position: absolute;
+  bottom: 40px;
+  width: 40px;
+  height: 40px;
+  transform: rotate(45deg);
+  border-left: none;
+  border-top: none;
+  border-right: 2px $brand-secondary solid;
+  border-bottom: 2px $brand-secondary solid;
+}
+.arrow::before {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  margin: -10px 0 0 -10px;
+  border-left: none;
+  border-top: none;
+  border-right: 1px $brand-secondary solid;
+  border-bottom: 1px $brand-secondary solid;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: arrow;
+}
+@keyframes arrow {
+  0% { 
+    opacity: 1; 
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-10px, -10px);
+  }
+}
+
+
+//===================================
+// HOMEPAGE : specific styles only used here
+//===================================
+.home {
+  background-color: $brand-primary;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  h1 {
+    margin: 0;
+    font-family: $font-name;
+    color: $brand-white;
+    font-size: 5rem;
+  }
+  ul {
+    margin-bottom: 5rem;
+  }
+  li {
+    margin: 2rem 2rem 0 2rem;
+    display: inline-block;
+  }
+  a {
+    color: $brand-black;
+    text-decoration: underline;
+  }
+  a:hover {
+    color: $brand-secondary;
+  }
+  .blurb {
+    width: 50%;
+    font-size: 0.85rem;
+  }
+}
+.home.container {
+  margin-top: 0;
+}
+
+
+//===================================
+// NAV : specific styles only used here
+//===================================
+nav .creature img {
+  width: 32px;
+}
+
+//===================================
+// MENU : specific styles only used here
+//===================================
+.menu-box {
+  width: 200px;
+  position: relative;
+  .creature {
+    margin: 2.5rem -0.5rem 0 0;
+  }
+  .card {
+    width: 75%;
+  }
+  .line {
+    position: absolute;
+    width: 15%;
+    border-bottom: 1px dotted $brand-black;
+    transform: rotate(-45deg);
+    top: 75%;
+    left: 25%;
+  }
+}
+.menu-box:hover{
+  .creature, .line {
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+  }
+  a {
+    color: $brand-secondary;
+  }
+}
+
+@keyframes bounce {
+  0%   { transform: translate(0) }
+  80%  { transform: translate(0, -20px) }
+  90%  { transform: translate(0) }
+  95%  { transform: translate(0, -5px) }
+  100%  { transform: translate(0) }
+}
+
+
+//===================================
+// BREAKPOINT ADJUSTMENTS
+//===================================
+
+// at roughly tablet landscape the layout moves to two columns
+@media only screen and (min-width: $width) {
+
+//--- containers
+  .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .flex-standard {
+    align-items: flex-start;
+  }
+  .content {
+    margin-top: 2rem;
+    margin-bottom: -1.5rem;
+  }
+  .about {
+    .content {
+      width: 70%; 
+    }
+  }
+  .examples {
+    .content {
+      width: 40%;
+    }
+    .content:first-of-type {
+    max-width: 20%
+    }
+    .content:nth-of-type(2n) {
+      height: 100%;
+    }
+  }
+}
