@@ -200,6 +200,11 @@ function IconEmail() {
     </svg>
   )
 }
+function CreatureElf() {
+  return (
+    <img src='https://github.com/jennikate/portfolio/blob/master/src/styles/images/jp-elf.png?raw=true' alt='elf icon'/>
+  )
+}
 
 const iconList = [
   //code icons
@@ -256,5 +261,6 @@ export {
   IconVSCode,
   IconWebpack,
   IconLinkedIn,
-  IconEmail
+  IconEmail,
+  CreatureElf
 }

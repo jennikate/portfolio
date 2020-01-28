@@ -3,6 +3,7 @@ import { IconGithub, IconLink } from '../../styles/icons'
 import ExampleData from '../Elements/ExampleData'
 import Nav from '../Nav'
 import Accordion from '../Elements/Accordion'
+import { CreatureElf } from '../../styles/icons'
 
 const Examples = () => {
 
@@ -12,8 +13,8 @@ const Examples = () => {
       <Accordion>
         {ExampleData.map((ele, i) => {
           return (
-            <div label={ele.title}>
-              <div className='container' key={i}>
+            <div label={ele.title} key={i}>
+              <div>
                 <div className='tab-content'>
                   <div className='flex-container'>
                     <div className='content title-block flex-standard'>

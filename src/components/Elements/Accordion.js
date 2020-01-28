@@ -5,7 +5,7 @@ import AccordionSection from './AccordionSection'
 //https://alligator.io/react/react-accordion-component/
 
 class Accordion extends Component {
-  
+
   static propTypes = {
     children: PropTypes.instanceOf(Object).isRequired,
   };
@@ -40,16 +40,17 @@ class Accordion extends Component {
     } = this;
 
     return (
-      <div style={{ border: '2px solid #008f68' }}>
-        {children.map(child => (
-          <AccordionSection
-            isOpen={!!openSections[child.props.label]}
-            label={child.props.label}
-            onClick={onClick}
-          >
-            {child.props.children}
-          </AccordionSection>
-        ))}
+      <div className='container accordion'>
+          {children.map((child, i) => (
+            <AccordionSection
+              isOpen={!!openSections[child.props.label]}
+              label={child.props.label}
+              onClick={onClick}
+              key={i}
+            >
+              {child.props.children}
+            </AccordionSection>
+          ))}
       </div>
     );
   }

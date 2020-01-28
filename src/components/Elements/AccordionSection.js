@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 //https://alligator.io/react/react-accordion-component/
 
 class AccordionSection extends Component {
-  
+
   static propTypes = {
     children: PropTypes.instanceOf(Object).isRequired,
     isOpen: PropTypes.bool.isRequired,
@@ -22,30 +22,23 @@ class AccordionSection extends Component {
       props: { isOpen, label },
     } = this;
 
+
+
     return (
-      <div
+      <div className='accordion-tab'
         style={{
-          background: isOpen ? '#fae042' : '#6db65b',
-          border: '1px solid #008f68',
-          padding: '5px 10px',
+          background: isOpen ? '#FFFFFF' : '#EFF4F5',
         }}
       >
-        <div onClick={onClick} style={{ cursor: 'pointer' }}>
-          {label}
-          <div style={{ float: 'right' }}>
-            {!isOpen && <span>&#9650;</span>}
-            {isOpen && <span>&#9660;</span>}
+        <div onClick={onClick} className='accordion-label flex-horizontal'>
+          <div>
+            {!isOpen && <span className='creature'>&nbsp;</span>}
+            {isOpen && <span className='creature open'>&nbsp;</span>}
           </div>
+          {label}
         </div>
         {isOpen && (
-          <div
-            style={{
-              background: '#6db65b',
-              border: '2px solid #008f68',
-              marginTop: 10,
-              padding: '10px 20px',
-            }}
-          >
+          <div>
             {this.props.children}
           </div>
         )}

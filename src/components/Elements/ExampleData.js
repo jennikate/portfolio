@@ -14,7 +14,8 @@ const ExampleData = [
     para1: 'With my partner we built a CRUD process allowing users to create prescriptions, I focused on the activation/deactiation of reminders to take medication, book appointments and reorder, as well as the code ready to send those reminders to a scheduluer for email sending.',
     para2: 'Includes code ready to send reminders to Twilio, user registration, profile and medication management.',
     devIcons: [<IconReact />, <IconDjango />, <IconPython />, <IconPostgres /> ],
-    stack: ['full stack', 'mobile first', 'RESTful API']
+    stack: ['full stack', 'mobile first', 'RESTful API'],
+    creature: 'elf'
   },
   {
     title: 'GiftList',
