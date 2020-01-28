@@ -1,12 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import creatureArray from '../../styles/creatures'
+import Nav from '../Nav'
 
 const Menu = () => {
 
   return (
-    <section className='container'>
-
+    <section className='menu'>
+    <Nav />
+    <div className='flex-container'>
+      <h1 className='page-title'>Choose your adventure</h1>
       {creatureArray.map((elem, i) => {
         return (
           <div className='menu-box flex-horizontal' key={i}>
@@ -20,6 +23,7 @@ const Menu = () => {
           </div>
         )
       })}
+      </div>
 
 
       

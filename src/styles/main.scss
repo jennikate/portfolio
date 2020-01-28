@@ -88,9 +88,10 @@ html, body {
   width: 100%;
   background-color: $brand-white;
   z-index: 1; //always on top
+  min-height: 32px;
 }
 //--- related content wrapper
-.content {
+.content, .accordion {
   margin: 0.5rem 1rem;
   padding: 1rem;
 }
@@ -133,6 +134,11 @@ a:hover {
 h1 {
   margin-block-start: 0.5rem;
   font-size: 1.5em;
+}
+.page-title {
+  padding-top: 5rem; //allows for sticky nav on pages without a container
+  margin-bottom: -1rem; // remove bottom padding for this scenario only. This is a hacky solution, should revisit it
+  color: $brand-secondary;
 }
 h2 {
   margin-block-end: 0.5rem; //reduce the bottom margin that is specified in normalize.css
@@ -209,8 +215,6 @@ a svg, p svg {
 .accordion-tab:nth-of-type(3) .accordion-label div span.creature { background-image: url('https://github.com/jennikate/portfolio/blob/master/src/styles/images/gnome.png?raw=true'); }
 .accordion-tab:nth-of-type(4) .accordion-label div span.creature { background-image: url('https://github.com/jennikate/portfolio/blob/master/src/styles/images/jp-mage.png?raw=true'); }
 .accordion-tab:nth-of-type(5) .accordion-label div span.creature { background-image: url('https://github.com/jennikate/portfolio/blob/master/src/styles/images/BARD.png?raw=true'); }
- 
-
 
 .headshot {
   border: 10px solid $brand-black;
@@ -423,6 +427,12 @@ nav .creature img {
     }
     ul {
       margin-bottom: 0;
+    }
+  }
+  .menu {
+    .flex-container {
+      align-items: center;
+      flex-direction: column;
     }
   }
 }

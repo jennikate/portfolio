@@ -3,13 +3,13 @@ import { IconGithub, IconLink } from '../../styles/icons'
 import ExampleData from '../Elements/ExampleData'
 import Nav from '../Nav'
 import Accordion from '../Elements/Accordion'
-import { CreatureElf } from '../../styles/icons'
 
 const Examples = () => {
 
   return (
     <section className='examples'>
       <Nav pageName='portfolio' />
+      <h1 className='page-title content'>Portfolio</h1>
       <Accordion>
         {ExampleData.map((ele, i) => {
           return (
