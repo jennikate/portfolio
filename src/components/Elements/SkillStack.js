@@ -23,7 +23,7 @@ const SkillStack = () => {
         <div className='flex-wrap' >
           {otherSkills.map((ele, i) => {
             return (
-              <ul className='inline-list flex-horizontal' key={i}>
+              <ul className='flex-horizontal' key={i}>
                 <li>{ele}</li>
               </ul>
             )

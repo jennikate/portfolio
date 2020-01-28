@@ -119,7 +119,7 @@ html, body {
   font-family: $font-name;
   font-size: 1.5rem;
   text-align: right;
-  margin: -1rem 2rem 0 0;
+  margin: 1rem 2rem 0 0;
   color: $brand-secondary;
 }
 a {
@@ -142,10 +142,13 @@ ul, p {
   margin-block-start: 0;
   padding-inline-start: 0;
 }
-.inline-list li {
+li {
   margin: 0 0.5rem;
   text-transform: uppercase;
   list-style-type: none;
+}
+.contact li {
+  margin: 1rem 0;
 }
 .app-info {
   font-style: italic;
@@ -172,10 +175,9 @@ ul, p {
 svg {
   width: 2rem;
 }
-// // adjusted sizing for card display
-// .card svg {
-//   width: 3rem;
-// }
+a svg, p svg {
+  margin-right: 0.5rem;
+}
 .icon-link path {
   fill: $brand-secondary;
 }
@@ -188,6 +190,17 @@ svg {
 }
 .creature img {
   width: 64px;
+}
+.headshot {
+  border: 10px solid $brand-black;
+  margin: 1rem 0 0 0;
+}
+.headshot img {
+  max-height: 230px;
+  border-style: inset;
+  border-width: 5px;
+  border-color: $brand-secondary;
+  margin-bottom: -5px;
 }
 //arrow inspiration from https://codepen.io/JoshMac/pen/MaYEmJ, with small adjustments
 //px coded to ensure it keeps the same shape and position regardless of device
@@ -226,7 +239,6 @@ svg {
     transform: translate(-10px, -10px);
   }
 }
-
 
 //===================================
 // HOMEPAGE : specific styles only used here
@@ -358,6 +370,20 @@ nav .creature img {
     }
     .content:nth-of-type(2n) {
       height: 100%;
+    }
+  }
+  .contact {
+    .headshot {
+      margin: 0 5rem 0 0;
+    }
+    .flex-container {
+      align-items: flex-end;
+    }
+    .flex-horizontal {
+      justify-content: flex-start;
+    }
+    ul {
+      margin-bottom: 0;
     }
   }
 }

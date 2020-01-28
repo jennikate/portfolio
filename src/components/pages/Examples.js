@@ -27,14 +27,14 @@ const Examples = () => {
 
               <div className='content blurb'>
                 <p className='app-info'>{ele.appInfo}</p>
-                <ul className='inline-list flex-horizontal icons'>
+                <ul className='flex-horizontal icons'>
                   {ele.devIcons.map((eleIcon, i) => {
                     return (
                       <li key={i}>{eleIcon}</li>
                     )
                   })}
                 </ul>
-                <ul className='inline-list flex-horizontal'>
+                <ul className='flex-horizontal'>
                   {ele.stack.map((eleStack, i) => {
                     return (
                       <li key={i}>{eleStack}</li>

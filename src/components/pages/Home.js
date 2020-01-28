@@ -8,7 +8,7 @@ const Home = () => {
     <section className='home container'>
       <h1>JenniKate Wallace</h1>
       <div className='flex-container'>
-        <ul className='inline-list li'>
+        <ul className=''>
           <li>Developer</li>
           <li>Dungeons &amp; Dragons Player</li>
           <li>Photographer</li>
