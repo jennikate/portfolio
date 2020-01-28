@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Home = () => {
 
+  console.log('home')
   return (
     <section className='home container'>
       <h1>JenniKate Wallace</h1>

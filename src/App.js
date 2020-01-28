@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
 import { loadCSS } from 'fg-loadcss'
 //my styles
 import './styles/main.scss'
@@ -17,8 +17,7 @@ const App = () => {
   }, [])
 
   return (
-
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/menu' component={Menu} />
@@ -27,8 +26,9 @@ const App = () => {
         <Route exact path='/contact' component={Contact} />
       </Switch>
     </BrowserRouter>
-
   )
 }
 
 export default App;
+
+//<BrowserRouter basename={process.env.PUBLIC_URL}> makes it work for github pages
