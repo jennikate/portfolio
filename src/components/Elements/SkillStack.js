@@ -3,17 +3,21 @@ import React from 'react'
 const SkillStack = () => {
 
   const otherSkills = [
-    'ERD',
-    'use case',
-    'flow diagramming',
+    'Node.js',
+    'Express',
+    'PostgreSQL',
+    'MongDB',
+    'Mocha/Chai',
+    'Material UI',
+    'Bulma',
+    'Use case',
     'Accessibility',
-    'Teamwork',
     'Scrum',
-    'Agile/Kanban',
+    'Kanban',
     'Process',
-    'Time management',
-    'Prioritisation',
-    'Deadline planning'
+    'Deadline planning',
+    'GitHub',
+    'Heroku'
   ]
 
   return (
