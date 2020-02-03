@@ -9,10 +9,18 @@ const Home = () => {
     <section className='home container'>
       <h1>JenniKate Wallace</h1>
       <div className='flex-container'>
-        <ul className=''>
-          <li>Developer</li>
-          <li>Dungeons &amp; Dragons Player</li>
-          <li>Photographer</li>
+        <ul className='creature-container'>
+          <li>Developer
+          <span className='creature two'></span>
+            <span className='creature four'></span>
+          </li>
+          <li>Dungeons &amp; Dragons Player
+            <span className='creature one'></span>
+            <span className='creature five'></span>
+          </li>
+          <li>Photographer
+            <span className='creature three'></span>
+            </li>
         </ul>
       </div>
       <div className='tagline'>
