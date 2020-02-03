@@ -11,7 +11,7 @@ const Menu = (props) => {
 
   return (
     <section className='menu'>
-      <div className='flex-container'>
+      <div className='flex-horizontal'>
         {creatureArray.map((elem, i) => {
           return (
             <div className='menu-box flex-horizontal' key={i}>

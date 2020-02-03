@@ -359,7 +359,8 @@ a svg, p svg {
 // NAV : specific styles only used here
 //===================================
 nav .creature img {
-  width: 32px;
+  // width: 32px;
+  width: 25px;
 }
 
 //===================================
@@ -377,7 +378,7 @@ nav .creature img {
 // MENU : specific styles only used here
 //===================================
 .menu-box {
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 }
 .creature.open img {
   transform: scaleX(-1);
@@ -464,8 +465,8 @@ nav .creature img {
     }
   }
   .menu {
-    .flex-container {
-      justify-content: center;
+    .menu-box {
+      margin-right: 1rem;
     }
   }
 }
