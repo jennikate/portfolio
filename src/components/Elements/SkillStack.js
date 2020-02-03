@@ -3,7 +3,7 @@ import React from 'react'
 const SkillStack = () => {
 
   const otherSkills = [
-    'Node.js',
+    'Node',
     'Express',
     'PostgreSQL',
     'MongDB',

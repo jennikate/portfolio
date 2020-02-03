@@ -11,7 +11,7 @@ const creatureArray = [
   {
     name: 'tiefling',
     url: 'https://github.com/jennikate/portfolio/blob/master/src/styles/images/jp-tief.png?raw=true',
-    menuName: 'portfolio',
+    menuName: 'examples',
     menuLink: '/projects'
   },
   {

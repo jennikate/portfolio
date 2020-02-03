@@ -50,15 +50,13 @@ html, body {
 .container {
   min-height: 100vh;
   position: relative;
+  margin-top: 3rem; //allow for sticky nav
 }
-.content-container {
+.example-container {
   margin: 0 1rem 3rem 1rem;
   padding-bottom: 2rem;
   background-color: $pure-white;
   box-shadow: $shadow;
-}
-.content-container:first-of-type {
-  margin-top: 5rem;
 }
 
 //--- flex containers
@@ -111,6 +109,10 @@ html, body {
   margin: 0.5rem 1rem;
   padding: 1rem;
 }
+.content-block {
+  background-color: $pure-white;
+  box-shadow: $shadow;
+}
 
 //===================================
 // CARDS
@@ -146,6 +148,10 @@ a:hover {
 h1 {
   margin-block-start: 0.5rem;
   font-size: 1.5em;
+}
+.page-title {
+  padding-top: 3rem; //allows for sticky nav on pages without a container
+  color: $brand-secondary;
 }
 h2 {
   margin-block-end: 0.5rem; //reduce the bottom margin that is specified in normalize.css
@@ -215,6 +221,24 @@ a svg, p svg {
 .creature img {
   width: 60px;
 }
+// .accordion-tab {
+//   .creature {
+//     display: block;
+//     background-size: cover;
+//     width: 32px;
+//     height: 32px;
+//     margin-right: 0.25rem;
+//   }
+//   .creature.open {
+//     transform: scaleX(-1);
+//   }
+// }
+// .accordion-tab:nth-of-type(1) .accordion-label div span.creature { background-image: url('https://github.com/jennikate/portfolio/blob/master/src/styles/images/jp-elf.png?raw=true'); }
+// .accordion-tab:nth-of-type(2) .accordion-label div span.creature { background-image: url('https://github.com/jennikate/portfolio/blob/master/src/styles/images/jp-tief.png?raw=true'); }
+// .accordion-tab:nth-of-type(3) .accordion-label div span.creature { background-image: url('https://github.com/jennikate/portfolio/blob/master/src/styles/images/gnome.png?raw=true'); }
+// .accordion-tab:nth-of-type(4) .accordion-label div span.creature { background-image: url('https://github.com/jennikate/portfolio/blob/master/src/styles/images/jp-mage.png?raw=true'); }
+// .accordion-tab:nth-of-type(5) .accordion-label div span.creature { background-image: url('https://github.com/jennikate/portfolio/blob/master/src/styles/images/BARD.png?raw=true'); }
+
 .headshot {
   border: 10px solid $brand-black;
   margin: 1rem 0 0 0;
@@ -263,6 +287,18 @@ a svg, p svg {
     transform: translate(-10px, -10px);
   }
 }
+
+
+//===================================
+// ACCORDION
+//===================================
+//see inline styling for accordion for now
+// .accordion-tab {
+//   padding: 1rem;
+// }
+// .accordion-label {
+//   cursor: pointer;
+// }
 
 //===================================
 // HOMEPAGE : specific styles only used here
@@ -317,19 +353,26 @@ nav .creature img {
 }
 
 //===================================
-// CONTACT : specific styles only used here
-//===================================
-.contact {
-  .content-container {
-  background-color: $brand-white;
-  box-shadow: none;
-  }
-}
-
-
-//===================================
 // MENU : specific styles only used here
 //===================================
+// .menu-box {
+//   width: 200px;
+//   position: relative;
+//   .creature {
+//     margin: 2.5rem -0.5rem 0 0;
+//   }
+//   .card {
+//     width: 75%;
+//   }
+//   .line {
+//     position: absolute;
+//     width: 15%;
+//     border-bottom: 1px dotted $brand-black;
+//     transform: rotate(-45deg);
+//     top: 75%;
+//     left: 20%;
+//   }
+// }
 .menu-box {
   margin-right: 1rem;
 }
@@ -357,6 +400,13 @@ nav .creature img {
   cursor: default;
 }
 
+// @keyframes bounce {
+//   0%   { transform: translate(0) }
+//   80%  { transform: translate(0, -20px) }
+//   90%  { transform: translate(0) }
+//   95%  { transform: translate(0, -5px) }
+//   100%  { transform: translate(0) }
+// }
 
 //===================================
 // BREAKPOINT ADJUSTMENTS

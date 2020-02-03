@@ -1,19 +1,22 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import creatureArray from '../styles/creatures'
+// import creatureArray from '../styles/creatures'
+import Menu from './pages/Menu'
 
 const Nav = (pageName) => {
 
-  const [creature, setCreature] = useState()
+  // const [creature, setCreature] = useState()
 
-  const creatureIcon = () => {
-    const obj = (creatureArray.filter(item => item.menuName === pageName.pageName))
-    obj.length === 0 ? setCreature(null) : setCreature(obj[0].url)
-  }
+  // const creatureIcon = () => {
+  //   const obj = (creatureArray.filter(item => item.menuName === pageName.pageName))
+  //   obj.length === 0 ? setCreature(null) : setCreature(obj[0].url)
+  // }
 
-  useEffect(() => {
-    creatureIcon()
-  }, [])
+  // useEffect(() => {
+  //   creatureIcon()
+  // }, [])
+
+  // console.log(creature)
 
   return (
     <section>
@@ -21,12 +24,13 @@ const Nav = (pageName) => {
         <Link to='/' className='logo'>
           <p>JKW</p>
         </Link>
-        {creature && 
+        {/* {creature && 
         <div className='creature flex-horizontal'>
           <Link to='/menu'>Menu</Link>
           <img src={creature} />
         </div>
-        }
+        } */}
+        <Menu pageName={pageName} />
       </nav>
     </section>
   )

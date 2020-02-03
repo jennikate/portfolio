@@ -2,15 +2,18 @@ import React from 'react'
 import { IconGithub, IconLink } from '../../styles/icons'
 import ExampleData from '../Elements/ExampleData'
 import Nav from '../Nav'
+import Accordion from './Accordion'
 
 const Examples = () => {
 
   return (
     <section className='examples'>
-      <Nav pageName='examples' />
+      <Nav pageName='portfolio' />
+      <h1 className='page-title content'>Portfolio</h1>
+      <Accordion>
         {ExampleData.map((ele, i) => {
           return (
-            <div className='content-container' label={ele.title} key={i}>
+            <div label={ele.title} key={i}>
               <div>
                 <div className='tab-content'>
                   <div className='flex-container'>
@@ -52,6 +55,7 @@ const Examples = () => {
             </div>
           )
         })}
+      </Accordion>
     </section>
   )
 }

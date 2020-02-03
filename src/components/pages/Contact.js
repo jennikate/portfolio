@@ -8,7 +8,7 @@ const Contact = () => {
     <section className='contact'>
       <Nav pageName='contact' />
       <div className='container'>
-        <div className='content flex-container'>
+        <div className='content flex-container content-container'>
           <div className='headshot'>
             <img src='https://github.com/jennikate/portfolio/blob/master/src/styles/images/jkw-picture.jpg?raw=true' alt='JenniKate Wallace portrait' />
           </div>

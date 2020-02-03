@@ -10,7 +10,7 @@ const About = () => {
     <section className='about'>
       <Nav pageName='about' />
       <div className='container'>
-        <div className='content content-block'>
+        <div className='content content-container'>
           <h1>Hi, I&apos;m JenniKate Wallace</h1>
           <p className='tagline'>or Jenni, or Jen, but rarely Jennifer!</p>
           <div className='blurb'>
