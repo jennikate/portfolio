@@ -5,7 +5,6 @@ import creatureArray from '../../styles/creatures'
 const Menu = (props) => {
 
   const getCurrent = (name) => {
-    console.log(name)
     return props.pageName.pageName === name ? 'open' : 'closed';
   }
 

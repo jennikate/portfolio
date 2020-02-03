@@ -4,6 +4,7 @@ import { IconReact, IconDjango, IconPython, IconNode, IconMongo, IconSass, IconP
 
 const ExampleData = [
   {
+    id: 'take_your_medicine',
     title: 'Take your medicine',
     group: 'A group project, built over one week',
     github: 'https://github.com/jennikate/remember-your-meds',
@@ -18,6 +19,7 @@ const ExampleData = [
     creature: 'elf'
   },
   {
+    id: 'giftlist',
     title: 'GiftList',
     group: 'A group project, built over one week',
     github: 'https://github.com/jennikate/gift-list',
@@ -31,6 +33,7 @@ const ExampleData = [
     stack: ['full stack', 'RESTful API', 'React Hooks']
   },
   {
+    id: 'make_it_count',
     title: 'Make It Count',
     group: 'A pair project, built over two days',
     github: 'https://github.com/jennikate/make-it-count',
@@ -44,6 +47,7 @@ const ExampleData = [
     stack: ['front end', 'data collation']
   },
   {
+    id: 'elf_adventures',
     title: 'Elf Adventures',
     group: 'A solo project built over a week',
     github: 'https://github.com/jennikate/Elf-Adventures',
@@ -57,6 +61,7 @@ const ExampleData = [
     stack: ['first JavaScript app', 'browser game']
   },
   {
+    id: 'cocktails',
     title: 'Cocktails',
     group: 'A solo project built over a weekend',
     github: 'https://github.com/jennikate/project-x',

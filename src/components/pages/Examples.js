@@ -1,16 +1,21 @@
 import React from 'react'
+import ScrollableAnchor from 'react-scrollable-anchor'
+import { configureAnchors } from 'react-scrollable-anchor'
 import { IconGithub, IconLink } from '../../styles/icons'
 import ExampleData from '../Elements/ExampleData'
 import Nav from '../Nav'
 
-const Examples = () => {
+const Examples = (props) => {
+
+  configureAnchors({offset: -60, scrollDuration: 200})
 
   return (
     <section className='examples'>
       <Nav pageName='examples' />
         {ExampleData.map((ele, i) => {
           return (
-            <div className='content-container' label={ele.title} key={i}>
+            <div className='content-container' id={ele.title} key={i}>
+              <ScrollableAnchor id={ele.id}>
               <div>
                 <div className='tab-content'>
                   <div className='flex-container'>
@@ -49,6 +54,7 @@ const Examples = () => {
                   </div>
                 </div>
               </div>
+              </ScrollableAnchor>
             </div>
           )
         })}

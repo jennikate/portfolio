@@ -1,5 +1,7 @@
 import React from 'react'
-import { IconReact, IconJs, IconCSS, IconHTML, IconDjango, IconPython, IconRight } from '../../styles/icons'
+import { HashLink } from 'react-router-hash-link'
+import ScrollableAnchor from 'react-scrollable-anchor'
+import { IconReact, IconJs, IconCSS, IconHTML, IconDjango, IconPython, IconRight, IconLink } from '../../styles/icons'
 
 //hard coded for the moment, feedback from Merve to reduce things shown here.
 //will review this version with people before finalising code
@@ -25,6 +27,15 @@ const TechStack = () => {
       <li className='flex-horizontal'><IconRight />Prioritisation</li>
       <li className='flex-horizontal'><IconRight />Flow diagram</li>
       <li className='flex-horizontal'><IconRight />ERD</li>
+    </ul>
+    <ul>
+      <li><h3>Portfolio</h3></li>
+      <li className='flex-horizontal'><IconLink /><HashLink to='/projects#take_your_medicine'>Take Your Medicine</HashLink></li>
+      <li className='flex-horizontal'><IconLink /><HashLink to='/projects#giftlist'>GiftList</HashLink></li>
+      <li className='flex-horizontal'><IconLink /><HashLink to='/projects#make_it_count'>Make It Count</HashLink></li>
+      <li className='flex-horizontal'><IconLink /><HashLink to='/projects#elf_adventures'>Elf Adventures</HashLink></li>
+      <li className='flex-horizontal'><IconLink /><a href='/projects#cocktails'>Cocktails</a></li>
+      {/* <li className='flex-horizontal'><IconRight />ERD</li> */}
     </ul>
   </div>
   )
