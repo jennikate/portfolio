@@ -6,7 +6,7 @@ const SkillStack = () => {
     'Node',
     'Express',
     'PostgreSQL',
-    'MongDB',
+    'MongoDB',
     'Mocha/Chai',
     'Material UI',
     'Bulma',
