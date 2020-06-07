@@ -24,7 +24,7 @@ const Home = () => {
         </ul>
       </div>
       <div className='tagline'>
-        <p>Once a Product Manager, now a Developer, ready to take on my next front-end or full-stack role!</p>
+        <p>Once a Product Manager, now a Developer, working hard to improve as a full-stack engineer!</p>
       </div>
       <div className='blurb'>
         <p>My night time adventures take place in fantasy worlds, with fantasy creatures, and a bunch of friends playing Dungeons &amp; Dragons!</p>
